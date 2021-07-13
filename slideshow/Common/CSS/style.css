@@ -1,0 +1,84 @@
+.slick-dots {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  display: flex;
+  justify-content: center;
+}
+.slick-dots button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots button::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  background: #ccc;
+}
+.slick-dots .slick-active button::before {
+  background: #666;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  overflow: hidden;
+}
+.prev,
+.next {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-40%, 0);
+  z-index: 1;
+  cursor: pointer;
+}
+.next {
+  right: -50px;
+}
+.prev::before,
+.next::before {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  padding: 10px;
+  transform: rotate(45deg);
+  position: relative;
+  top: 30%;
+}
+.prev::before {
+  border-left: 4px solid #666;
+  border-bottom: 4px solid #666;
+  left: 32px;
+}
+.next::before {
+  border-top: 4px solid #666;
+  border-right: 4px solid #666;
+  right: -3px;
+}
